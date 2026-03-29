@@ -1,8 +1,7 @@
-flask
-flask-cors
-scikit-learn
+streamlit
 numpy
 pandas
-gunicorn
+scikit-learn
 matplotlib
-joblib
+fpdf
+pickle5
