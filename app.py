@@ -168,14 +168,14 @@ if st.button("🔍 Predict Alzheimer's Risk"):
     pdf.cell(200, 10, txt="Alzheimer's Disease Prediction Report", ln=True, align="C")
     pdf.set_font("Arial", size=12)
     pdf.ln(10)
-    pdf.cell(200, 10, txt=f"Prediction: {'Positive' if prediction[0] == 1 else 'Negative'}", ln=True)
-    pdf.cell(200, 10, txt=f"Risk Percentage: {risk_proba:.2f}%", ln=True)
-    pdf.cell(200, 10, txt=f"Risk Level: {risk_level}", ln=True)
+    pdf.cell(190, 10, txt=f"Prediction: {'Positive' if prediction[0] == 1 else 'Negative'}", ln=True)
+    pdf.cell(190, 10, txt=f"Risk Percentage: {risk_proba:.2f}%", ln=True)
+    pdf.cell(190, 10, txt=f"Risk Level: {risk_level}", ln=True)
     pdf.ln(5)
-    pdf.cell(200, 10, txt="Recommended Precautions:", ln=True)
+    pdf.cell(190, 10, txt="Recommended Precautions:", ln=True)
     pdf.set_font("Arial", size=11)
     for p in precautions:
-        pdf.multi_cell(0, 10, f"- {p}")
+        pdf.multi_cell(190, 10, f"- {p}")
     pdf.output("patient_report.pdf")
 
     with open("patient_report.pdf", "rb") as f:
